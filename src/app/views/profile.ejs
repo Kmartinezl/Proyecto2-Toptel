@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+    <title>Profile Page</title>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script type="text/javascript">
+
+        function sendPosition() {
+          var userid = document.getElementById("userid").value;
+          var latitude = document.getElementById("latitude").value;
+          var longitude = document.getElementById("longitude").value;
+          if (userid != "" && latitude != "" && longitude != "") {
+            $.get('/api/recvPos?userid=' + userid + '&latitude=' + latitude + '&longitude=' + longitude);
+            alert("Datos enviados al Servidor");
+            location.reload();
+          } else {
+            alert("Debe tener todos los campos llenos");
+          }
+        }
+        function getPosition() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var latitude = position.coords.latitude;
+              var longitude = position.coords.longitude;
+              document.getElementById("latitude").value = latitude;
+              document.getElementById("longitude").value = longitude;
+            });
+          } else {
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+          }
+        }
+      </script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="text-center">
+        <h1>Pagina de la app</h1>
+        <a href="/logout" class="btn btn-light btn-sm">
+          Logout
+        </a>
+      </header>
+      <hr>
+      <div class="container">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
+              <p>
+                
+                <strong>email</strong> : <%= user.local.email %> <br>
+                <strong>password</strong> : <%= user.local.password %>
+              </p>
+
+              <label>Latitud: </label>
+              <input id="latitude" type="text" name="latitude"</input>
+              <p>
+             <label>Longitud: </label>
+             <input id="longitude" type="text" name="longitude"</input>
+             <p>
+              </div>
+              <button type="button" onclick="getPosition();">Get Lat & Long</button>
+              <button type="button" onclick="sendPosition();">Send</button>
+              <p>
+              <label id="result"></label>
+
+              <a href="/logout" class="btn btn-light btn-sm">
+                Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

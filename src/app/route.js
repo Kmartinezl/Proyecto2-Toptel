@@ -1,15 +1,15 @@
 module.exports = (app, passport) => {
 
-	
+
 	app.get('/', (req, res) => {
-		res.render('index');
+		res.render('index.ejs');
     });
     app.get('/login', (req, res) => {
 		res.render('login.ejs', {
 			message: req.flash('loginMessage')
 		});
     });
-    
+
 		app.post('/login', passport.authenticate('local-login', {
 			successRedirect: '/profile',
 			failureRedirect: '/login',
@@ -21,14 +21,14 @@ module.exports = (app, passport) => {
 			message: req.flash('signupMessage')
 		});
 		});
-		
+
 
 
     app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect: '/profile',
 		failureRedirect: '/signup',
 		failureFlash: true // allow flash messages
-    }));    
+    }));
 
 
 		app.get('/profile', isLoggedIn, (req, res) => {
@@ -46,9 +46,8 @@ module.exports = (app, passport) => {
 			if (req.isAuthenticated()) {
 				return next();
 			}
-		
+
 			res.redirect('/');
 		}
-	
-};
 
+};

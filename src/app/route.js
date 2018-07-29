@@ -23,7 +23,6 @@ module.exports = (app, passport) => {
 		});
 
 
-
     app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect: '/profile',
 		failureRedirect: '/signup',
@@ -46,8 +45,12 @@ module.exports = (app, passport) => {
 			if (req.isAuthenticated()) {
 				return next();
 			}
-
-			res.redirect('/');
+			 return res.redirect('/');
 		}
 
-};
+		app.get('/map', (req,res) => {
+			res.render('map', {
+				user:req.user
+			});
+		});
+}

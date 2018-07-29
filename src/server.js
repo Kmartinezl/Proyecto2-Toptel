@@ -10,8 +10,11 @@ const bodyParser= require('body-parser');
 const session= require('express-session');
 
 const url = require('./config/database');
+mongoose.connect(url,{
+	useMongoClient:true
+});
 
-mongoose.connect(url);
+//mongoose.connect(url);
 require('./config/passport')(passport);
 
 app.set('port', process.env.PORT || 3000);

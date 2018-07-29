@@ -38,7 +38,7 @@
         }
       </script>
   </head>
-  
+
   <body>
     <div class="container">
       <header class="text-center">
@@ -54,7 +54,7 @@
             <div class="card-body">
               <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
               <p>
-                
+
                 <strong>email</strong> : <%= user.local.email %> <br>
                 <strong>password</strong> : <%= user.local.password %>
               </p>
@@ -70,6 +70,10 @@
               <button type="button" onclick="sendPosition();">Send</button>
               <p>
               <label id="result"></label>
+
+              <!--<div class="text-center">
+                      <p>See position on the <a href="/map"> map </a></p>
+              </div> -->
 
               <a href="/logout" class="btn btn-light btn-sm">
                 Logout

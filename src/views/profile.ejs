@@ -54,14 +54,14 @@
               <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
               <p>
               <p>
-                <strong>email</strong> : <%= user.local.email %> <br>
-                <strong>password</strong> : <%= user.local.password %>
+                <strong>Email</strong> : <%= user.local.email %> <br>
+                <strong>Password</strong> : <%= user.local.password %>
               </p>
 
-              <label>Latitud: </label>
+              <label>Latitude: </label>
               <input id="latitude" type="text" name="latitude"</input>
               <p>
-             <label>Longitud: </label>
+             <label>Longitude: </label>
              <input id="longitude" type="text" name="longitude"</input>
              <p>
               <button type="button" class="btn btn-dark btn-sm" onclick="getPosition();" class = "button" style= width:'70px'; height:'25px'>Get Lat & Long</button>
@@ -69,7 +69,7 @@
               <p>
               <label id="result"></label>
 
-              <button class="btn btn-dark btn-sm" onclick="getLocation()"> Ver mapa </button>
+              <button class="btn btn-dark btn-sm" onclick="getLocation()"> See Map </button>
               <a href="/logout" class="btn btn-dark btn-sm"> Logout </a>
 
               <div id="mapholder"></div>

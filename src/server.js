@@ -10,7 +10,7 @@ const bodyParser= require('body-parser');
 const session= require('express-session');
 
 const { url } = require('./config/database');
-mongoose.connect(/**'mongodb://mongo-server/login-node'**/url ,{
+mongoose.connect(url,{
 	useMongoClient:true
 });
 

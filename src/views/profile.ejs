@@ -42,19 +42,18 @@
   <body class="map">
     <div class="container">
       <header class="text-center">
-        <h1>User profile</h1>
-      <!--  <a href="/logout" class="btn btn-light btn-sm">
-          Logout
-        </a> -->
+        <h1>User Profile</h1>
       </header>
+
       <hr>
       <div class="container">
+      <div id="izquierda">
         <div class="col-sm-6">
-          <div class="card">
+          <div class="card text-center">
             <div class="card-body">
               <h3 class="card-title"><span class="fa fa-user"></span> Local</h3>
               <p>
-
+              <p>
                 <strong>email</strong> : <%= user.local.email %> <br>
                 <strong>password</strong> : <%= user.local.password %>
               </p>
@@ -65,15 +64,13 @@
              <label>Longitud: </label>
              <input id="longitude" type="text" name="longitude"</input>
              <p>
-              </div>
-              <button type="button" onclick="getPosition();" class = "button" style= width:'70px'; height:'25px'>Get Lat & Long</button>
-              <button type="button" onclick="sendPosition();">Send</button>
+              <button type="button" class="btn btn-dark btn-sm" onclick="getPosition();" class = "button" style= width:'70px'; height:'25px'>Get Lat & Long</button>
+              <button type="button" class="btn btn-dark btn-sm" onclick="sendPosition();">Send</button>
               <p>
               <label id="result"></label>
 
-              <!--<p id="demo">Click the button to get your position.</p> -->
-
-              <button onclick="getLocation()"> Ver mapa </button>
+              <button class="btn btn-dark btn-sm" onclick="getLocation()"> Ver mapa </button>
+              <a href="/logout" class="btn btn-dark btn-sm"> Logout </a>
 
               <div id="mapholder"></div>
 
@@ -98,7 +95,7 @@
                 var latlon = new google.maps.LatLng(lat, lon)
                 var mapholder = document.getElementById('mapholder')
                 mapholder.style.height = '250px';
-                mapholder.style.width = '500px';
+                mapholder.style.width = '980px';
 
                 var myOptions = {
                   center:latlon,zoom:14,
@@ -127,11 +124,9 @@
                      break;
                    }
                  }
-               </script>
-
-              <a href="/logout" class="btn btn-light btn-sm">
-                Logout
-              </a>
+                 </script>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -6,11 +6,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
     <title>Profile Page</title>
-    <script type="text/javascript"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script type="text/javascript">
+      <script type="text/javascript"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.css">
+	    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script type="text/javascript">
 
         function sendPosition() {
           var userid = document.getElementById("userid").value;
@@ -42,10 +42,10 @@
   <body class="map">
     <div class="container">
       <header class="text-center">
-        <h1>Pagina de la app</h1>
-        <a href="/logout" class="btn btn-light btn-sm">
+        <h1>User profile</h1>
+      <!--  <a href="/logout" class="btn btn-light btn-sm">
           Logout
-        </a>
+        </a> -->
       </header>
       <hr>
       <div class="container">
@@ -66,14 +66,14 @@
              <input id="longitude" type="text" name="longitude"</input>
              <p>
               </div>
-              <button type="button" onclick="getPosition();">Get Lat & Long</button>
+              <button type="button" onclick="getPosition();" class = "button" style= width:'70px'; height:'25px'>Get Lat & Long</button>
               <button type="button" onclick="sendPosition();">Send</button>
               <p>
               <label id="result"></label>
 
-              <p id="demo">Click the button to get your position.</p>
+              <!--<p id="demo">Click the button to get your position.</p> -->
 
-              <button onclick="getLocation()">Try It</button>
+              <button onclick="getLocation()"> Ver mapa </button>
 
               <div id="mapholder"></div>
 

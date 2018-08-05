@@ -1,28 +1,41 @@
-.login {
-    background: #2fbbaf;  
-  background: -webkit-linear-gradient(to right, #6380e0, #2f37ab); 
-  background: linear-gradient(to right, #638be0, #4a2fab); 
-  }
-  
+|.login {
+    background: #2fbbaf;
+    background: -webkit-linear-gradient(to right, #6380e0, #2f37ab);
+    background: linear-gradient(to right, #638be0, #4a2fab);
+    }
+
   .signup {
-    background: #2fbbaf;  
-  background: -webkit-linear-gradient(to right, #6380e0, #2f37ab); 
-  background: linear-gradient(to right, #638be0, #4a2fab); 
-  }
+    background: #2fbbaf;
+    background: -webkit-linear-gradient(to right, #6380e0, #2f37ab);
+    background: linear-gradient(to right, #638be0, #4a2fab);
+    }
+
   .index {
-    background: #2fbbaf;  
-  background: -webkit-linear-gradient(to right, #6380e0, #2f37ab); 
-  background: linear-gradient(to right, #638be0, #4a2fab); 
-  }
+    background: #2fbbaf;
+    background: -webkit-linear-gradient(to right, #6380e0, #2f37ab);
+    background: linear-gradient(to right, #638be0, #4a2fab);
+    }
 
   .profile {
-    background: #2fbbaf;  
-  background: -webkit-linear-gradient(to right, #6380e0, #2f37ab); 
-  background: linear-gradient(to right, #638be0, #4a2fab); 
-  }
+    background: #2fbbaf;
+    background: -webkit-linear-gradient(to right, #6380e0, #2f37ab);
+    background: linear-gradient(to right, #638be0, #4a2fab);
+    }
 
   .map {
-    background: #2fbbaf;  
-  background: -webkit-linear-gradient(to right, #6380e0, #2f37ab); 
-  background: linear-gradient(to right, #638be0, #4a2fab); 
-  }
+    background: #2fbbaf;
+    background: -webkit-linear-gradient(to right, #6380e0, #2f37ab);
+    background: linear-gradient(to right, #638be0, #4a2fab);
+    }
+
+  .button::after {
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    position: absolute;
+    background: #3a9999;
+    border-radius: 5px;
+    content: ‘Flipped’;
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+    }

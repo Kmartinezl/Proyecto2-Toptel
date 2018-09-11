@@ -5,9 +5,7 @@ services:
     image: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/geolocationp2.tk.conf
-      - /etc/ssl/certs/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem:ro
-      - /docker-volumes/etc/letsencrypt/live/geolocationp2.tk/fullchain.pem:/etc/letsencrypt/live/geolocationp2.tk/fullchain.pem
-      - /docker-volumes/etc/letsencrypt/live/geolocationp2.tk/privkey.pem:/etc/letsencrypt/live/geolocationp2.tk/privkey.pem
+      - ./ssl:/etc/nginx/ssl
     ports:
       - "80:80"
       - "443:443"

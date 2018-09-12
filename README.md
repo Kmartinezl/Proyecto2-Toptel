@@ -1,7 +1,7 @@
 # Proyecto1-Toptel
 Aplicación Geolocalización:
- Alejandro Velasquez Uribe –  avelas61@eafit.edu.co
- Keila Andrea Martines Lagares -kmartin5@eafit.edu.co
+Alejandro Velasquez Uribe –  avelas61@eafit.edu.co
+Keila Andrea Martines Lagares -kmartin5@eafit.edu.co
 Creación de máquinas en Aws:
 1)	Se crea una nueva estancia en Amazon EC2 (con las opciones free para no recibir cargos de pago)
 2)	Se tiene que crear una Key y asociarla con la estancia.

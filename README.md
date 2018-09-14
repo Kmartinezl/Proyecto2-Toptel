@@ -35,43 +35,43 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
 
  source: https://docs.docker.com/install/linux/docker-ce/centos/
 
- _- $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+  - $ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
   - $ sudo yum install docker-ce
   - $ sudo systemctl start docker
-  - $ sudo systemctl enable docker_
+  - $ sudo systemctl enable docker
 
  instalar docker-compose: https://docs.docker.com/compose/install/
 
- _- $ sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o             /usr/local/bin/docker-compose_
+  - $ sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o             /usr/local/bin/docker-compose
 
- _- $ sudo chmod +x /usr/local/bin/docker-compose_
+  - $ sudo chmod +x /usr/local/bin/docker-compose
 
 ------------------------------------------------------------------------------------------------
 **Descargar Proyecto:**
- _- $ cd /tmp/
+  - $ cd /tmp/
   - $ mkdir app
   - $ cd app
   - $ git clone https://github.com/Kmartinezl/Proyecto1-Toptel
-  - $ cd Proyecto1-Toptel_
+  - $ cd Proyecto1-Toptel
  
  ---------------------------------------------------------------------------------------------------
 **Creación de contenedores en Docker:**
 
 1. Contenedor de Mongo:
 
- _- $ docker pull mongo
-  - $ docker run --name mongo-server -p 27017:27017 -v $(pwd)/data:/data/db -d mongo:latest_
+  - $ docker pull mongo
+  - $ docker run --name mongo-server -p 27017:27017 -v $(pwd)/data:/data/db -d mongo:latest
 
 2. Contenedor de Nodejs+app:
 
- _- $ cd Proyecto1-Toptel
+  - $ cd Proyecto1-Toptel
   - $ docker image build -t <docker_user>/artnode:<version>
- _- $ docker image push <docker_user>/artnode:<version>
- _- $ docker run --name nodeapp --link mongo-server:mongo -p 3000:3000 -d <docker_user>/artnode:<version>_
+  - $ docker image push <docker_user>/artnode:<version>
+  - $ docker run --name nodeapp --link mongo-server:mongo -p 3000:3000 -d <docker_user>/artnode:<version>
  
 3. Contenedor de Nginx:
 
-_- $ docker pull nginx
+ - $ docker pull nginx
  - $ docker run --name webapp --link nodeapp:node -p 80:80 -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx:latest
 
 -------------------------------------------------------------------------------------------------
@@ -92,11 +92,13 @@ _- $ docker pull nginx
 
   **Generar certificado:**
  
-  _- $ apt-get install certbot
-   - $ certbot certonly_
+   - $ apt-get install certbot
+   - $ certbot certonly
   
   
-  _A continuación debe aparecer en consola el siguiente mensaje:_
+  _[A continuación debe aparecer en consola el siguiente mensaje:]_
+  
+  ------------------------------------------------------------------------------------
   
    How would you like to authenticate with the ACME CA?
    
@@ -107,12 +109,17 @@ _- $ docker pull nginx
   -------------------------------------------------------------------------------
    Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 
   
-  _Digite "1"_
+  ---------------------------------------------------------------------------------
+  _[Digite "1"]_
   
+  ---------------------------------------------------------------------------------------
    Please enter in your domain name(s) (comma and/or space separated)  (Enter 'c'
    to cancel)geolocationp2.tk
+   
    Obtaining a new certificate
+   
    Performing the following challenges:
+   
    http-01 challenge for geolocationp2.tk
 
 
@@ -124,20 +131,26 @@ _- $ docker pull nginx
   -------------------------------------------------------------------------------
    Press 1 [enter] to confirm the selection (press 'c' to cancel): 1
   
-  _A continuación se debe ingresar la raíz del sitio Web (se supone que el servicio Web ya se encuentra funcionando).          Seleccionar "1" y luego especificar la ruta a la raíz del sitio Web (home/centos/app/Proyecto1-Toptel)_
+  ------------------------------------------------------------------------------------------------
+  _[A continuación se debe ingresar la raíz del sitio Web (se supone que el servicio Web ya se encuentra funcionando).          Seleccionar "1" y luego especificar la ruta a la raíz del sitio Web (home/centos/app/Proyecto1-Toptel)]_
   
   
    **[Mensaje en consola]**
   
+  ---------------------------------------------------------------------------------------------------------
    Input the webroot for geolocationp2.tk: (Enter 'c' to cancel):/var/www/linuxito.com/
    Waiting for verification...
    Cleaning up challenges
    Generating key (2048 bits): /etc/letsencrypt/keys/0003_key-certbot.pem
    Creating CSR: /etc/letsencrypt/csr/0003_csr-certbot.pem
 
+
    IMPORTANT NOTES:
+   
+   
     - Congratulations! Your certificate and chain have been saved at
       /etc/letsencrypt/live/geolocationp2.tk/fullchain.pem.
+      
       Your cert will expire on 2018-10-08. To obtain a new or tweaked
       version of this certificate in the future, simply run certbot
       again. To non-interactively renew *all* of your certificates, run
@@ -148,7 +161,7 @@ _- $ docker pull nginx
       Donating to EFF:                    https://eff.org/donate-le
   
   
-  _El certificado se ha generado con éxito y ha quedado almacenado en el siguiente directorio: 
+  _[El certificado se ha generado con éxito y ha quedado almacenado en el siguiente directorio:]
   
          etc/letsencrypt/live/geolocationp2.tk/
   

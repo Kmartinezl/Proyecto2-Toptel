@@ -79,10 +79,11 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
 ----------------------------------------------------------------------------------------
 
  **Disponibilidad:**
-
+ 
+**Analisis:**
    Implementación de un Load balancer con Amazon web service para así asegurar que se repartan de manera correcta las cargas    de nuestro servicio web.
  
-   Además de generar una conexión entre el DCA y las estancias de Amazon, para que el DCA soporte nuestra máquina, por si en    el peor de los casos Amazon llega a caerse. Esto lo hacemos por medio de Docker Swarm.
+   Además de generar una conexión entre el DCA y las estancias de Amazon, para que el DCA soporte nuestra máquina, por si en el peor de los casos Amazon llega a caerse. Esto lo hacemos por medio de Docker Swarm.
 
 
  **Seguridad:**

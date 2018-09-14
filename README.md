@@ -96,7 +96,7 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
    - $ certbot certonly
   
   
-  _[A continuación debe aparecer en consola el siguiente mensaje:]_
+  _A continuación debe aparecer en consola el siguiente mensaje:_
   
   ------------------------------------------------------------------------------------
   
@@ -132,7 +132,7 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
    Press 1 [enter] to confirm the selection (press 'c' to cancel): 1
   
   ------------------------------------------------------------------------------------------------
-  _[A continuación se debe ingresar la raíz del sitio Web (se supone que el servicio Web ya se encuentra funcionando).          Seleccionar "1" y luego especificar la ruta a la raíz del sitio Web (home/centos/app/Proyecto1-Toptel)]_
+  _A continuación se debe ingresar la raíz del sitio Web (se supone que el servicio Web ya se encuentra funcionando).          Seleccionar "1" y luego especificar la ruta a la raíz del sitio Web (home/centos/app/Proyecto1-Toptel)_
   
   
    **[Mensaje en consola]**

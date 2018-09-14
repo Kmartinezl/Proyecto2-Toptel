@@ -15,10 +15,10 @@
 --------------------------------------------------------------------------------------
 **Conexión a la máquina:**
 
-**- Linux:**
+- **Linux:**
 _ssh -i “key.pem” centos@dominio_o_ip_
 
-**- Windows:**
+- **Windows:**
 Para conectarnos en Windows necesitamos una consola, la cual puede ser Windows bash o PuTTY.
 Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, luego nos conectamos seleccionando la clave y conectándonos a centos@dominio_o_ip
 
@@ -161,7 +161,7 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
       Donating to EFF:                    https://eff.org/donate-le
   
   
-  _[El certificado se ha generado con éxito y ha quedado almacenado en el siguiente directorio:]
+  _El certificado se ha generado con éxito y ha quedado almacenado en el siguiente directorio:_
   
          etc/letsencrypt/live/geolocationp2.tk/
   

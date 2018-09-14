@@ -4,7 +4,7 @@
 ------------------------------------------------------------------------------------
 
 - Alejandro Velasquez Uribe – avelas61@eafit.edu.co
-- Keila Andrea Martínez Lagares -kmartin5@eafit.edu.co
+- Keila Andrea Martínez Lagares – kmartin5@eafit.edu.co
 
 -------------------------------------------------------------------------------------
 **Creación de máquinas en Aws:**

@@ -83,6 +83,8 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
 **Analisis:**
   Implementación de un Load balancer con Amazon web service para así asegurar que se repartan de manera correcta las cargas    de nuestro servicio web.
  
+ ![lb](https://user-images.githubusercontent.com/20845086/45589251-4b4c1180-b8e8-11e8-94d2-56f9fb53aab4.png)
+
    Además de generar una conexión entre el DCA y las estancias de Amazon, para que el DCA soporte nuestra app web, por si se llega el casos en que Amazon llega a caerse. Esto lo hacemos por medio de Docker Swarm.
   
   Control y monitoreo ademas de mucha versatilidad a la hora de desplegar nuevas maquinas usando herramientas brindads por Jenkins

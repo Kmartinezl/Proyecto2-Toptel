@@ -87,7 +87,7 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
 
    Además de generar una conexión entre el DCA y las estancias de Amazon, para que el DCA soporte nuestra app web, por si se llega el casos en que Amazon llega a caerse. Esto lo hacemos por medio de Docker Swarm.
    
-  https://github.com/Kmartinezl/Proyecto1-Toptel/issues/2#issue-360562579
+  ![lb](https://user-images.githubusercontent.com/20845086/45898744-834bcc80-bda0-11e8-83fd-60b23415e9cf.jpg)
   
   Control y monitoreo ademas de mucha versatilidad a la hora de desplegar nuevas maquinas usando herramientas brindads por Jenkins
 

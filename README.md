@@ -93,6 +93,8 @@ Para conectarnos por PuTTY tenemos que generar el archivo key con PuTTYgen, lueg
 
 **Balanceador de cargas con AWS:**
 
+Para crear nuestro balanceador de cargas tenemos que entrar en AWS y dirigirnos a la pestaña de EC2. allí buscamos la opcion Load balancing, clickeamos en load balancer y veremos algo como: 
+
   
 
  **Seguridad:**

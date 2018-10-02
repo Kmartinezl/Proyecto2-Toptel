@@ -5,8 +5,8 @@
 
 ### a. Miembros del equipo y asignaciones de QA
 
-**QA:** Disponibilidad.      **Encargado:** Alejandro Velasquez Uribe
-**QA:** Seguridad            **Encargado:** Keila Martínez Lagares
+* **QA:** Disponibilidad.      **Encargado:** Alejandro Velasquez Uribe
+* **QA:** Seguridad            **Encargado:** Keila Martínez Lagares
 
 ### b. Selección de la aplicación basada en Proyecto 1
 
@@ -27,7 +27,7 @@ La aplicación consiste en un sistema que permita registrar a un usuario, permit
 * El sistema debe poder mostrar las posiciones guardadas.
 * El sistema debe poder generar una ruta con las posiciones.
 
-## 2. Detalles técnicos del diseño e implementación funcional para el proyecto 2
+## 2. Detalles técnicos del diseño e implementación funcional para el proyecto2
 
 La aplicación estará distribuida en tres (3) nodos de un cluster generado con
 docker swarm, en los cuales solo el principal contará con los servicios de NGNIX y MongoDB
